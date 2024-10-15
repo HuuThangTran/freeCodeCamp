@@ -1,0 +1,162 @@
+
+
+<!--declaration string tells browser that the doctument is an html5-->
+<!--specify the document type and version of HTML being used-->
+<!DOCTYPE html>
+
+<!--html elements is the root elements of an html page wrap all content-->
+<!--specify the language of the page with lang attribute-->
+<html lang="en">
+
+
+
+    <!--important info (metadata about the doc that doesnt displayed directly on the apge) goes inside the head-->
+    <head>
+        <!--title lements determines what browser show in the title bar or tab for the page-->
+        <title>CatPhotoApp</title>
+        <!--meta elements void lements-->
+        <meta charset="utf-8">   
+    </head>
+
+
+
+    <!-- All page content elements that should be rendered go insde the body elements-->
+    <body>
+        <!--//HTML5 has some elements that identify different areas, make html easier to read and help with SEO (search engine optimization) and accessiblity -->
+        <!-- the main element is used to represent the main content of the body of an HTML doc, should be unique  -->
+        <main> 
+            <!-- html elements have an opening and closing tag with content in between         
+            h1 is the heading element and i used for the main heading of a webpage -->
+            <h1>CatPhotoApp</h1> 
+
+
+
+
+            <section> <!--section elements is used to define sections chapters headers footers -->
+
+                <h2>Cat Photos</h2> <!--order increase less important --> 
+
+                <!-- create a paragraph of text on websites. -->
+                <!-- link to another page with anchor hyperref elements-->
+                <!-- target attributes specifies where to open the linked documents target="_blank" open linked in new tab -->
+                <p> See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery.</p> 
+        
+            
+            
+                <!-- void elements: elements without a closing tag-->
+                 <!-- alt attribute: improve accesiblity for screen reader and displayed the if the images fails to load -->
+                <a href="https://freecatphotoapp.com"> <!-- other type of content canalso be turned into link-->
+                    <img  src = "https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt ="A cute orange cat lying on its back"> 
+                </a>
+
+            </section> 
+            <section>
+                <h2>Cat Lists</h2>
+                <h3>Thing cats love:</h3>
+                <ul> <!--unordered list -->
+                    <li>milk</li>
+                    <li>laster pointers</li>
+                    <li>lassagna</li>
+                </ul>
+
+                <figure> <!--Associate picture content with captions-->
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+                    
+                    <!--Add a caption to a described image contain within the figure elements-->
+                    <!--<em></em emphasis italic   -->
+                    <figcaption>Cats <em>love</em> lasagna.</figcaption> 
+                </figure>
+                
+                <h3>Top 3 things cats hate:</h3>
+                <ol> <!-- ordered list 123-->
+                    <li>fleat treatment</li>
+                    <li>thunder</li>
+                    <li>other cats</li>
+                </ol>
+
+                <figure>
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+                    
+                    <!--strong elements blood-->
+                    <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+                
+                </figure>
+
+
+            </section>
+
+            <section>
+                <h2>Cat Form</h2>
+                
+                <!--web form collect infos form users (name, emails etc...)-->
+                <!--actions where form data should be sent-->
+                <form action="https://freecatphotoapp.com/submit-cat-photo">
+                    
+
+
+
+                    <!--radio: buttion for questions only one answer out of multiple options-->
+                    <!-- label elements used to associate the text for an input element with the input element itself-->
+                    <!-- ID attributes help to identify specific html elements in the whole document(entire page) which can be further used by CSS, js, <a>href elements-->
+                    <!-- name attibutes: key-value pairs of the form which also help make radio button one/many-->
+                    <!-- for the key-value of radio form the default value is =on which ("name"=on) => need to specify value attribute-->
+                    <fieldset> <!--the fieldset elements helps group groups related elements within a forms, it helps to visually and semantically organize forms controls, making it easy to read and understand, also create a box surround the elements-->
+                        
+                        <legend>is your cat an indoor or outdoor cat?</legend> <!--legend elements act as an captions for content in the fieldset elements-->
+                        <!--Checked attribute make a checkbox c hecked or radio button selected by default you need "checked' attribute-->
+                        <label><input type="radio" id ="indoor" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+
+                        <label><input type="radio" id ="outdoor" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+                    
+                    </fieldset>
+                    
+                    
+                    <fieldset>
+                        <legend>What's your cat's personality?</legend>
+                        
+                        <!-- alnative wait to associate text with input elements-->
+                         <!--for attribute is used to connect the label element to associate the label with a specific form control like input textarea ...-->
+                        <input type="checkbox" id="loving" value="loving" name="personality"> <label for="loving">Loving</label>
+                        <input type="checkbox" id="lazy" value="lazy" name="personality"> <label for="lazy">Lazy</label>
+                        <input type="checkbox" id="energetic" value="energetic" name="personality"> <label for="energetic"> Energetic</label>
+                        
+                    </fieldset>
+                    
+
+                    <!--
+                    Name Attribute:
+                    Each input field in a form needs a name attribute. 
+                    This attribute acts as an identifier for the data being submitted.
+                    When the form is submitted, the browser packages the form data into key-value pairs, 
+                    where the key is the name of the input element, and the value is 
+                    what the user entered in that field.
+                    -->
+                    <!--input element collect dat from web form - void element -->
+                    <!--Placeholder text: small text inside as placeholder-->
+                    <!--required attributes: prevent user from submitting the form when required info missing-->
+                    <input type="text" name="catphotoul" placeholder="cat photo URL" required> 
+                    
+                    <!--a clickable button to submit the form the he action url-->
+                    <!--ubmit: The button submits the form data to the server.-->
+                    <button type="submit">Submit</button>
+                    <!--inline elements: elements dont appears on new lines-->
+                </form>
+            </section>
+            
+        
+        
+        
+        
+        </main>
+
+
+        <!--footer elements contains infos about the author, copyright data, links to terms use, contract info etc.. after the main inside body-->
+        <footer>
+            <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
+            
+
+
+        </footer>
+
+    </body>
+</html>
